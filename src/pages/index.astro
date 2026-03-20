@@ -1,0 +1,171 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anaí Rosa - Falando, refletindo e fazendo música</title>
+    <link rel="icon" type="image/png" href="images/favicon.jpg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <Header />
+
+  <!-- ===================== DOBRA 1 ===================== -->
+  <!-- Vídeo em destaque à esquerda e texto de apresentação à direita -->
+  <section class="hero">
+    <h1 class="section-title hero-title">
+      Falando, refletindo e fazendo música!
+    </h1>
+
+    <div class="container hero-content">
+      <!-- Bloco do vídeo do YouTube -->
+      <div class="hero-photo-card">
+        <div class="hero-photo-wrapper">
+          <a href="https://www.youtube.com/watch?v=MKIf01JiNLo" target="_blank">
+            <div class="container-imagem">
+              <img
+                src="images/thumbnail-anai.jpg"
+                class="img-grande"
+                style="border-radius: 20px"
+                alt="Piano de cauda em uma sala"
+              />
+              <img
+                src="images/youtube.avif"
+                class="img-pequena"
+                alt="Ícone do YouTube"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Bloco de texto de apresentação -->
+      <div class="hero-text-box">
+        <p>Olá, meu nome é Anaí, sou professora de música e amo tocar piano.</p>
+        <br />
+        <p>
+          Convido você a fazer uma viagem pelo mundo da música. É simples e
+          gratuito, basta se inscrever no meu canal no YouTube.
+        </p>
+        <br />
+        <p>
+          Ah, não se esqueça de ativar o sininho de notificação para receber
+          aviso quando eu colocar vídeo novo!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DOBRA 2 ===================== -->
+  <!-- Cartões com temas principais da vida musical -->
+  <section class="themes">
+    <h2 class="section-title themes-title">
+      Temas que admiro e fazem parte da minha vida musical
+    </h2>
+
+    <div class="container themes-grid">
+      <!-- Cartão 1: Piano e Teclado -->
+      <article class="theme-card">
+        <!-- Imagem ilustrativa do piano -->
+        <img src="images/piano-teclado.avif" alt="Piano de cauda em uma sala" />
+        <div class="theme-card-body">
+          <h3>Piano e Teclado</h3>
+          <p>
+            Minha paixão é interpretar músicas através das teclas! Toco Piano e
+            Teclado, mas prefiro o Piano!
+          </p>
+        </div>
+      </article>
+
+      <!-- Cartão 2: Musicalização -->
+      <article class="theme-card">
+        <!-- Imagem ilustrativa de instrumentos de musicalização -->
+        <img
+          src="images/musicalizacao.avif"
+          alt="Instrumentos usados em musicalização"
+        />
+        <div class="theme-card-body">
+          <h3>Musicalização</h3>
+          <p>
+            É um processo muito importante, divertido e recheado de conteúdo que
+            precisa ser realizado com crianças, jovens e adultos.
+          </p>
+        </div>
+      </article>
+
+      <!-- Cartão 3: Flauta Doce -->
+      <article class="theme-card">
+        <!-- Imagem ilustrativa de flautas doces -->
+        <img
+          src="images/flauta-doce.avif"
+          alt="Conjunto de flautas doces sobre a mesa"
+        />
+        <div class="theme-card-body">
+          <h3>Flauta Doce</h3>
+          <p>
+            Durante o curso de Licenciatura em Música, aprendi a tocar e gostar
+            deste instrumento. Agora tenho uma grande família de Flautas!
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== DOBRA 3 ===================== -->
+  <!-- Cartões de redes sociais com ícones à esquerda e texto à direita -->
+  <section class="social">
+    <h2 class="section-title social-title">Me acompanhe nas redes sociais</h2>
+
+    <div class="container social-grid">
+      <!-- YouTube -->
+      <a
+        class="social-card"
+        href="https://www.youtube.com/@anairosa"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="images/youtube.avif" alt="Ícone do YouTube" />
+        <span>YouTube</span>
+      </a>
+
+      <!-- Instagram -->
+      <a
+        class="social-card"
+        href="https://www.instagram.com/anai.r.rosa/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="images/instagram.avif" alt="Ícone do Instagram" />
+        <span>Instagram</span>
+      </a>
+
+      <!-- Facebook -->
+      <a
+        class="social-card"
+        href="https://www.facebook.com/anai.rosa.90"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="images/facebook.avif" alt="Ícone do Facebook" />
+        <span>Facebook</span>
+      </a>
+
+      <!-- LinkedIn -->
+      <a
+        class="social-card"
+        href="https://www.linkedin.com/in/anai-rosa/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="images/linkedin.avif" alt="Ícone do LinkedIn" />
+        <span>LinkedIn</span>
+      </a>
+    </div>
+  </section>
+  <Footer />
+
+</html>
