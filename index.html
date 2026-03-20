@@ -174,7 +174,11 @@
       </div>
     </section>
     <section class="themes" style="padding: 5px">
-      Copyright 2026 - Anaí Rodrigues Rosa
+      Copyright <span id="ano-corrente">1968</span> - Anaí Rodrigues Rosa
     </section>
+    <script>
+      document.getElementById('ano-corrente').innerHTML =
+        new Date().getFullYear();
+    </script>
   </body>
 </html>
