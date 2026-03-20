@@ -1,10 +1,8 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Dispara o deploy sempre que você fizer push na branch principal
   push:
     branches: [main]
-  # Permite rodar o deploy manualmente pela aba Actions
   workflow_dispatch:
 
 permissions:
@@ -16,12 +14,25 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout seu repositório
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Instalar, buildar e fazer upload
-        uses: withastro/action@v3
-        # Esta action oficial da Astro detecta automaticamente se você usa npm, pnpm ou yarn
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20 # Força o uso do Node 20 estável
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Astro
+        run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist # O Astro joga o site pronto aqui
 
   deploy:
     needs: build
@@ -30,6 +41,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy para o GitHub Pages
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
