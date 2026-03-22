@@ -8,7 +8,7 @@
 /* ====== ESTILOS GERAIS ====== */
 body {
   font-family: 'Arial', 'Helvetica', sans-serif;
-  background-color: #f4f4f4; /* cor de fundo fora das seções */
+  background-color: var(--rosa-fundo);
   color: #ffffff;
 }
 
@@ -138,7 +138,7 @@ h3 {
 
 .social-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(200px, 260px));
+  grid-template-columns: repeat(4, minmax(200px, 260px));
   justify-content: center;
   gap: 25px;
 }

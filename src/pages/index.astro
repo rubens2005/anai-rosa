@@ -1,25 +1,15 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = 'Home';
 ---
 
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Anaí Rosa - Falando, refletindo e fazendo música</title>
-    <link rel="icon" type="image/png" href="images/favicon.jpg" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <Header />
-
+<BaseLayout pageTitle={pageTitle}>
   <!-- ===================== DOBRA 1 ===================== -->
   <!-- Vídeo em destaque à esquerda e texto de apresentação à direita -->
   <section class="hero">
-    <h1 class="section-title hero-title">
+    <h2 class="section-title hero-title">
       Falando, refletindo e fazendo música!
-    </h1>
+    </h2>
 
     <div class="container hero-content">
       <!-- Bloco do vídeo do YouTube -->
@@ -114,58 +104,4 @@ import Footer from '../components/Footer.astro';
       </article>
     </div>
   </section>
-
-  <!-- ===================== DOBRA 3 ===================== -->
-  <!-- Cartões de redes sociais com ícones à esquerda e texto à direita -->
-  <section class="social">
-    <h2 class="section-title social-title">Me acompanhe nas redes sociais</h2>
-
-    <div class="container social-grid">
-      <!-- YouTube -->
-      <a
-        class="social-card"
-        href="https://www.youtube.com/@anairosa"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src="images/youtube.avif" alt="Ícone do YouTube" />
-        <span>YouTube</span>
-      </a>
-
-      <!-- Instagram -->
-      <a
-        class="social-card"
-        href="https://www.instagram.com/anai.r.rosa/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src="images/instagram.avif" alt="Ícone do Instagram" />
-        <span>Instagram</span>
-      </a>
-
-      <!-- Facebook -->
-      <a
-        class="social-card"
-        href="https://www.facebook.com/anai.rosa.90"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src="images/facebook.avif" alt="Ícone do Facebook" />
-        <span>Facebook</span>
-      </a>
-
-      <!-- LinkedIn -->
-      <a
-        class="social-card"
-        href="https://www.linkedin.com/in/anai-rosa/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src="images/linkedin.avif" alt="Ícone do LinkedIn" />
-        <span>LinkedIn</span>
-      </a>
-    </div>
-  </section>
-  <Footer />
-
-</html>
+</BaseLayout>

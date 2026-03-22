@@ -1,0 +1,37 @@
+---
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import RedesSociais from '../components/RedesSociais.astro';
+
+const { pageTitle = 'Home' } = Astro.props;
+const title1 = pageTitle === 'Home' ? 'Anaí Rosa' : `Anaí Rosa - ${pageTitle}`;
+const title2 = pageTitle === 'Home' ? 'Anaí Rosa' : pageTitle;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title1}</title>
+    <link rel="icon" type="image/png" href="/images/favicon.jpg" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <Navigation />
+
+  <section class="themes">
+    <h1 class="section-title themes-title">{title2}</h1>
+  </section>
+
+  <slot />
+
+  <!-- ===================== DOBRA 3 ===================== -->
+  <!-- Cartões de redes sociais com ícones à esquerda e texto à direita -->
+  <section class="social">
+    <h2 class="section-title social-title">Me acompanhe nas redes sociais</h2>
+    <RedesSociais />
+  </section>
+  <Footer />
+
+
+</html>
