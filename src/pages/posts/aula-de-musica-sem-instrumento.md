@@ -63,6 +63,6 @@ A aula que narrei aqui teve objetivo, conteúdo, desenvolvimento, recursos e ava
 Você sabe dizer qual parte e de qual propriedade da música estou me referindo?
 
 Se não souber a resposta, pode conferir no plano de aula que fiz orientada por meu professor da Universidade está disponível
-no [Plano de Aula 1](./plano-de-aula-1) para você baixar e usar como inspiração para fazer o seu ou simplesmente copiar para sua aula de música.
+no [Plano de Aula 1](/posts/plano-de-aula-1) para você baixar e usar como inspiração para fazer o seu ou simplesmente copiar para sua aula de música.
 
 Minha experiencia foi em um colégio estadual com crianças do ensino fundamental, sendo 4 turmas do sétimo ano. Foram 24 aulas no total.

@@ -24,4 +24,4 @@ Você pode baixar o plano de aula completo <a href="/pdfs/plano-de-aula-1.pdf" t
 
 ## Relato do plano de aula
 
-Aqui você pode ver [Como realizar uma aula de música sem instrumento musical](./aula-de-musica-sem-instrumento).
+Aqui você pode ver [Como realizar uma aula de música sem instrumento musical](/posts/aula-de-musica-sem-instrumento).
