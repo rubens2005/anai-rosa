@@ -4,6 +4,7 @@ title: 'Como realizar uma aula de música sem instrumento musical'
 pubDate: 2026-03-21
 description: 'Primeira aula de música como regente da classe.'
 author: 'Anaí Rosa'
+aparecerNaLista: sim
 image:
   url: 'https://docs.astro.build/assets/rose.webp'
   alt: 'The Astro logo on a dark background with a pink glow.'

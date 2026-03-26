@@ -1,0 +1,56 @@
+---
+import { Image } from 'astro:assets';
+import tecladoImg from '../assets/piano-teclado.jpg';
+import musicalizacaoImg from '../assets/musicalizacao.jpg';
+import flautaDoceImg from '../assets/flauta-doce.jpg';
+const temas = [
+  {
+    nome: 'Piano e Teclado',
+    descricao:
+      'Minha paixão é interpretar músicas através das teclas! Toco Piano e Teclado, mas prefiro o Piano!',
+    image: tecladoImg,
+    alt: 'Piano de cauda em uma sala',
+  },
+  {
+    nome: 'Musicalização',
+    descricao:
+      'É um processo muito importante, divertido e recheado de conteúdo que precisa ser realizado com crianças, jovens e adultos.',
+    image: musicalizacaoImg,
+    alt: 'Instrumentos usados em musicalização',
+  },
+  {
+    nome: 'Flauta Doce',
+    descricao:
+      'Durante o curso de Licenciatura em Música, aprendi a tocar e gostar deste instrumento. Agora tenho uma grande família de Flautas!',
+    image: flautaDoceImg,
+    alt: 'Conjunto de flautas doces sobre a mesa',
+  },
+];
+---
+
+<!-- ===================== DOBRA 2 ===================== --><!-- Cartões com temas principais da vida musical -->
+<section>
+  <h2
+    class="text-center text-[2.20rem] font-bold leading-9 pt-6 pb-6 text-base-800"
+  >
+    Temas que admiro e fazem parte da minha vida musical
+  </h2>
+  <div class="flex gap-6 justify-center p-10 flex-wrap">
+    {
+      temas.map((d) => (
+        <article class="bg-base-800 text-act-100 rounded-2xl w-[320px] overflow-hidden flex flex-col">
+          <Image
+            src={d.image}
+            alt={d.alt}
+            format="webp"
+            class="w-full object-cover"
+          />
+          <div class="p-5">
+            <h3 class="text-xl mb-3 font-bold">{d.nome}</h3>
+            <p class="text-base leading-normal">{d.descricao}</p>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

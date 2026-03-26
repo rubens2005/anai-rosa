@@ -5,13 +5,21 @@ const [ano, mes, dia] = frontmatter.pubDate.toString().slice(0, 10).split('-');
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <div class="hero-text-box themes-title">
-    <p>Escrito por {frontmatter.author}</p>
-    <p>Publicado em {dia}/{mes}/{ano}</p>
+  <div class="max-w-3/4 mx-auto">
+    <div
+      class="bg-act-200 rounded-2xl py-6 px-6 text-base-800 text-lg leading-6"
+    >
+      <p>Escrito por {frontmatter.author}</p>
+      <p>Publicado em {dia}/{mes}/{ano}</p>
 
-    <hr />
-  </div>
-  <div class="hero-text-box themes-title">
-    <slot />
+      <hr />
+    </div>
+    <div
+      class="bg-act-200 rounded-2xl py-6 px-6 text-base-800 text-lg leading-6"
+    >
+      <article class="prose lg:prose-xl">
+        <slot />
+      </article>
+    </div>
   </div>
 </BaseLayout>

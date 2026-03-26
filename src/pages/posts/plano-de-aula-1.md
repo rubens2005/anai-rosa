@@ -4,6 +4,7 @@ title: 'Plano de Aula 1'
 pubDate: 2026-03-21
 description: 'Plano de aula da primeira aula'
 author: 'Anaí Rosa'
+aparecerNaLista: não
 image:
   url: 'https://docs.astro.build/assets/rose.webp'
   alt: 'The Astro logo on a dark background with a pink glow.'

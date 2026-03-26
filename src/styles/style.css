@@ -20,19 +20,11 @@ h3 {
 
 /* Cores principais extraídas das imagens */
 :root {
-  --verde-escuro: #234032;
-  --rosa-fundo: rgb(249, 213, 223);
-  --texto-titulo: rgb(249, 213, 223);
+  --verde-escuro: #38442d;
+  --rosa-fundo: #f9d5df;
+  --texto-titulo: #f9d5df;
   --cinza-cartao: #2a4636;
-  --rosa-cartao: rgb(249, 213, 223);
-}
-
-/* Centralização comum para títulos de seção */
-.section-title {
-  text-align: center;
-  font-size: 2.2rem;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  --rosa-cartao: #f9d5df;
 }
 
 /* Container principal de cada dobra para limitar largura */
@@ -84,10 +76,6 @@ h3 {
 .themes {
   background-color: var(--rosa-fundo);
   color: #163022;
-}
-
-.themes-title {
-  color: #234032;
 }
 
 .themes-grid {
@@ -173,10 +161,6 @@ h3 {
 
 /* ====== RESPONSIVIDADE ====== */
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 1.8rem;
-  }
-
   .hero-content {
     padding-bottom: 25px;
   }
@@ -204,9 +188,9 @@ h3 {
   display: block;
 }
 .img-pequena {
+  width: 50px; /* Tamanho da imagem pequena */
+  height: auto;
   position: absolute;
   bottom: 5px; /* Ajuste a margem inferior */
   right: 15px; /* Ajuste a margem direita */
-  width: 50px; /* Tamanho da imagem pequena */
-  height: auto;
 }

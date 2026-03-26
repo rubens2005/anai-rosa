@@ -1,40 +1,47 @@
 ---
+import { Image } from 'astro:assets';
+import youtubeImg from '../assets/youtube.avif';
+import anaiLinda from '../assets/thumbnail-anai.jpg';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import MeusTemas from '../layouts/MeusTemas.astro';
 const pageTitle = 'Home';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <!-- ===================== DOBRA 1 ===================== -->
   <!-- Vídeo em destaque à esquerda e texto de apresentação à direita -->
-  <section class="hero">
-    <h2 class="section-title hero-title">
+  <section class="bg-base-800 text-act-200">
+    <h2
+      class="text-center text-[2.20rem] font-bold leading-9 pt-6 pb-6 hero-title"
+    >
       Falando, refletindo e fazendo música!
     </h2>
 
-    <div class="container hero-content">
+    <div class="flex gap-8 justify-center content-center pb-10 flex-wrap">
       <!-- Bloco do vídeo do YouTube -->
-      <div class="hero-photo-card">
-        <div class="hero-photo-wrapper">
-          <a href="https://www.youtube.com/watch?v=MKIf01JiNLo" target="_blank">
-            <div class="container-imagem">
-              <img
-                src="images/thumbnail-anai.jpg"
-                class="img-grande"
-                style="border-radius: 20px"
-                alt="Piano de cauda em uma sala"
-              />
-              <img
-                src="images/youtube.avif"
-                class="img-pequena"
-                alt="Ícone do YouTube"
-              />
-            </div>
-          </a>
-        </div>
+      <div>
+        <a href="https://www.youtube.com/watch?v=MKIf01JiNLo" target="_blank">
+          <div class="relative inline-block">
+            <Image
+              src={anaiLinda}
+              alt="Anaí sorrindo na frente do piano de cauda em uma sala"
+              format="webp"
+              class="min-w-lg max-w-lg h-auto block rounded-3xl"
+            />
+            <Image
+              src={youtubeImg}
+              alt="Ícone do YouTube"
+              format="webp"
+              class="w-13 h-auto absolute bottom-4 right-4 img-pequena"
+            />
+          </div>
+        </a>
       </div>
 
       <!-- Bloco de texto de apresentação -->
-      <div class="hero-text-box">
+      <div
+        class="bg-act-200 rounded-3xl py-6 px-6 text-base-800 text-lg leading-6 min-w-lg max-w-lg"
+      >
         <p>Olá, meu nome é Anaí, sou professora de música e amo tocar piano.</p>
         <br />
         <p>
@@ -49,59 +56,5 @@ const pageTitle = 'Home';
       </div>
     </div>
   </section>
-
-  <!-- ===================== DOBRA 2 ===================== -->
-  <!-- Cartões com temas principais da vida musical -->
-  <section class="themes">
-    <h2 class="section-title themes-title">
-      Temas que admiro e fazem parte da minha vida musical
-    </h2>
-
-    <div class="container themes-grid">
-      <!-- Cartão 1: Piano e Teclado -->
-      <article class="theme-card">
-        <!-- Imagem ilustrativa do piano -->
-        <img src="images/piano-teclado.avif" alt="Piano de cauda em uma sala" />
-        <div class="theme-card-body">
-          <h3>Piano e Teclado</h3>
-          <p>
-            Minha paixão é interpretar músicas através das teclas! Toco Piano e
-            Teclado, mas prefiro o Piano!
-          </p>
-        </div>
-      </article>
-
-      <!-- Cartão 2: Musicalização -->
-      <article class="theme-card">
-        <!-- Imagem ilustrativa de instrumentos de musicalização -->
-        <img
-          src="images/musicalizacao.avif"
-          alt="Instrumentos usados em musicalização"
-        />
-        <div class="theme-card-body">
-          <h3>Musicalização</h3>
-          <p>
-            É um processo muito importante, divertido e recheado de conteúdo que
-            precisa ser realizado com crianças, jovens e adultos.
-          </p>
-        </div>
-      </article>
-
-      <!-- Cartão 3: Flauta Doce -->
-      <article class="theme-card">
-        <!-- Imagem ilustrativa de flautas doces -->
-        <img
-          src="images/flauta-doce.avif"
-          alt="Conjunto de flautas doces sobre a mesa"
-        />
-        <div class="theme-card-body">
-          <h3>Flauta Doce</h3>
-          <p>
-            Durante o curso de Licenciatura em Música, aprendi a tocar e gostar
-            deste instrumento. Agora tenho uma grande família de Flautas!
-          </p>
-        </div>
-      </article>
-    </div>
-  </section>
+  <MeusTemas />
 </BaseLayout>

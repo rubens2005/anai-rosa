@@ -3,6 +3,8 @@ import Navigation from './Navigation.astro';
 import Footer from './Footer.astro';
 import RedesSociais from './RedesSociais.astro';
 
+import '../styles/global.css';
+
 const { pageTitle = 'Home' } = Astro.props;
 const title1 = pageTitle === 'Home' ? 'Anaí Rosa' : `Anaí Rosa - ${pageTitle}`;
 const title2 = pageTitle === 'Home' ? 'Anaí Rosa' : pageTitle;
@@ -15,23 +17,18 @@ const title2 = pageTitle === 'Home' ? 'Anaí Rosa' : pageTitle;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title1}</title>
     <link rel="icon" type="image/png" href="/images/favicon.jpg" />
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <Navigation />
+  </head><body class="bg-act-200 text-base-800">
+    <Navigation />
 
-  <section class="themes">
-    <h1 class="section-title themes-title">{title2}</h1>
-  </section>
+    <section>
+      <h1 class="text-center text-4xl font-bold leading-9 pt-6 pb-6">
+        {title2}
+      </h1>
+    </section>
 
-  <slot />
+    <slot />
 
-  <!-- ===================== DOBRA 3 ===================== -->
-  <!-- Cartões de redes sociais com ícones à esquerda e texto à direita -->
-  <section class="social">
-    <h2 class="section-title social-title">Me acompanhe nas redes sociais</h2>
     <RedesSociais />
-  </section>
-  <Footer />
-
-
+    <Footer />
+  </body>
 </html>

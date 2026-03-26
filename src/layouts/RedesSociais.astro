@@ -1,45 +1,59 @@
-<div class="container social-grid">
-  <!-- YouTube -->
-  <a
-    class="social-card"
-    href="https://www.youtube.com/@anairosa"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img src="/images/youtube.avif" alt="Ícone do YouTube" />
-    <span>YouTube</span>
-  </a>
+---
+import { Image } from 'astro:assets';
+import youtubeImg from '../assets/youtube.avif';
+import linkedinImg from '../assets/linkedin.avif';
+import instagramImg from '../assets/instagram.avif';
+import facebookImg from '../assets/facebook.avif';
 
-  <!-- Instagram -->
-  <a
-    class="social-card"
-    href="https://www.instagram.com/anai.r.rosa/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img src="/images/instagram.avif" alt="Ícone do Instagram" />
-    <span>Instagram</span>
-  </a>
+const redes = [
+  {
+    nome: 'YouTube',
+    image: youtubeImg,
+    link: 'https://www.youtube.com/@anairosa',
+  },
+  {
+    nome: 'Instagran',
+    image: instagramImg,
+    link: 'https://www.instagram.com/anai.r.rosa/',
+  },
+  {
+    nome: 'FaceBook',
+    image: facebookImg,
+    link: 'https://www.facebook.com/anai.rosa.90',
+  },
+  {
+    nome: 'LinkedIn',
+    image: linkedinImg,
+    link: 'https://www.linkedin.com/in/anai-rosa/',
+  },
+];
+---
 
-  <!-- Facebook -->
-  <a
-    class="social-card"
-    href="https://www.facebook.com/anai.rosa.90"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img src="/images/facebook.avif" alt="Ícone do Facebook" />
-    <span>Facebook</span>
-  </a>
+<section class="bg-base-800 text-act-200">
+  <h2 class="text-center text-[2.20rem] leading-9 pt-6 pb-6 font-bold">
+    Me acompanhe nas redes sociais
+  </h2>
 
-  <!-- LinkedIn -->
-  <a
-    class="social-card"
-    href="https://www.linkedin.com/in/anai-rosa/"
-    target="_blank"
-    rel="noopener noreferrer"
+  <div
+    class="max-w-275 my-0 m-auto w-[90%] pt-0 px-5 pb-10 flex gap-6 flex-wrap justify-center"
   >
-    <img src="/images/linkedin.avif" alt="Ícone do LinkedIn" />
-    <span>LinkedIn</span>
-  </a>
-</div>
+    {
+      redes.map((d) => (
+        <a
+          class="bg-act-200 rounded-2xl p-4  flex items-center gap-4 text-base-800 text-[1.05rem] leading-6 font-semibold"
+          href={d.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src={d.image}
+            alt={`Ícone do ${d.nome}`}
+            format="webp"
+            class="w-auto h-14 object-cover"
+          />
+          <span>{d.nome}</span>
+        </a>
+      ))
+    }
+  </div>
+</section>
